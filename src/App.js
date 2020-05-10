@@ -8,9 +8,11 @@ import { ReactComponent as SpinningIcon } from './icons/spinning.svg'
 const App = (props) => {
   const [jokes, setJokes] = useState(data)
   const [isLoading, setIsLoading] = useState(false)
+  const [label, setLabel] = useState('')
 
   const randomJokes = () => {
     setIsLoading(true)
+    setLabel('')
     fetch(`https://icanhazdadjoke.com/`, {
       method: 'GET',
       headers: {
@@ -27,6 +29,7 @@ const App = (props) => {
 
   const searchJokes = (searchQuery) => {
     setIsLoading(true)
+    setLabel(searchQuery)
     fetch(`https://icanhazdadjoke.com/search?term=${searchQuery}&limit=${20}`, {
       method: 'GET',
       headers: {
@@ -48,7 +51,7 @@ const App = (props) => {
       {isLoading ? (
         <SpinningIcon style={{ display: 'block', margin: '0 auto' }} />
       ) : (
-        <JokesList jokes={jokes} />
+        <JokesList jokes={jokes} label={label}/>
       )}
     </div>
   )
