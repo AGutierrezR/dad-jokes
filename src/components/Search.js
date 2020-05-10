@@ -36,8 +36,15 @@ const Button = styled.button`
 `
 
 const Search = (props) => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
   return (
-    <form style={{ textAlign: 'center', marginBottom: '4rem' }}>
+    <form
+      onSubmit={handleSubmit}
+      style={{ textAlign: 'center', marginBottom: '4rem' }}
+    >
       <Input type="text" placeholder="Search Jokes" />
       <Button>Search</Button>
       <Button>Random</Button>
