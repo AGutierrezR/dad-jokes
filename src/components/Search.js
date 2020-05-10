@@ -36,8 +36,11 @@ const Button = styled.button`
 `
 
 const Search = (props) => {
+  const [search, setSearch] = useState('')
+
   const handleSubmit = (event) => {
     event.preventDefault()
+    setSearch('')
   }
 
   return (
@@ -45,7 +48,12 @@ const Search = (props) => {
       onSubmit={handleSubmit}
       style={{ textAlign: 'center', marginBottom: '4rem' }}
     >
-      <Input type="text" placeholder="Search Jokes" />
+      <Input
+        type="text"
+        placeholder="Search Jokes"
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+      />
       <Button>Search</Button>
       <Button>Random</Button>
     </form>
