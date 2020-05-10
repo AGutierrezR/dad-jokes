@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './App.css'
-import data from './data'
 import JokesList from './components/JokesList'
 import Search from './components/Search'
 import { ReactComponent as SpinningIcon } from './icons/spinning.svg'
 
 const App = (props) => {
-  const [jokes, setJokes] = useState(data)
+  const [jokes, setJokes] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [label, setLabel] = useState('')
 
