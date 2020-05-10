@@ -21,10 +21,24 @@ const App = (props) => {
       })
   }
 
+  const searchJokes = (searchQuery) => {
+    fetch(`https://icanhazdadjoke.com/search?term=${searchQuery}&limit=${20}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        const jokes = json.results
+        setJokes(jokes)
+      })
+  }
+
   return (
     <div className="App">
       <h1>{props.title}</h1>
-      <Search onRandom={randomJokes} />
+      <Search onRandom={randomJokes} onSearch={searchJokes} />
       <JokesList jokes={jokes} />
     </div>
   )

@@ -54,7 +54,7 @@ const Search = (props) => {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <Button>Search</Button>
+      <Button onClick={() => props.onSearch(search)}>Search</Button>
       <Button onClick={props.onRandom}>Random</Button>
     </form>
   )
