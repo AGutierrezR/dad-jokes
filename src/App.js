@@ -61,11 +61,16 @@ class App extends Component {
       <div className="App">
         <h1>{this.props.title}</h1>
         <Search onRandom={this.randomJokes} onSearch={this.searchJokes} />
-        {this.state.isLoading ? (
-          <SpinningIcon style={{ display: 'block', margin: '0 auto' }} />
-        ) : (
-          <JokesList jokes={this.state.jokes} label={this.state.label} />
-        )}
+        <div className="content">
+          {this.state.isLoading ? (
+            <SpinningIcon style={{ display: 'block', margin: '0 auto' }} />
+          ) : (
+            <JokesList jokes={this.state.jokes} label={this.state.label} />
+          )}
+        </div>
+        <footer style={{ textAlign: 'center', marginTop: '1.25rem'}}>
+          <p>Build with <a href="https://reactjs.org/">React</a>. This code is Open Source and available at <a href="https://github.com/AGutierrezR/dad-jokes">Github</a> </p>
+        </footer>
       </div>
     )
   }
