@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "973f0cd9d160eb724d1c9fd89f344657",
+    "revision": "96d239b92001c3e197477b3427616aaf",
     "url": "/dad-jokes/index.html"
   },
   {
-    "revision": "2ed63c7bc0efed756c44",
-    "url": "/dad-jokes/static/css/main.7e1bbe2b.chunk.css"
+    "revision": "4f89c4e65c7e64058ff2",
+    "url": "/dad-jokes/static/css/main.7eb4ee0b.chunk.css"
   },
   {
-    "revision": "447c4c313364509e4002",
-    "url": "/dad-jokes/static/js/2.f468da69.chunk.js"
+    "revision": "e80c0b899a0714b64c56",
+    "url": "/dad-jokes/static/js/2.75935663.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/dad-jokes/static/js/2.f468da69.chunk.js.LICENSE.txt"
+    "url": "/dad-jokes/static/js/2.75935663.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2ed63c7bc0efed756c44",
-    "url": "/dad-jokes/static/js/main.a36d6a8f.chunk.js"
+    "revision": "4f89c4e65c7e64058ff2",
+    "url": "/dad-jokes/static/js/main.7ffd45f6.chunk.js"
   },
   {
     "revision": "c56de877541203b8d3dd",
