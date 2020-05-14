@@ -6,9 +6,17 @@ body {
 }
 
 .App {
-  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2em;
+  padding-bottom: 1.25rem;
   max-width: 42rem;
   margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
 }
 
 h1,

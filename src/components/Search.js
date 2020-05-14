@@ -46,7 +46,7 @@ const Search = (props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      style={{ textAlign: 'center', marginBottom: '4rem' }}
+      style={{ textAlign: 'center', marginBottom: '2rem' }}
     >
       <Input
         type="text"
