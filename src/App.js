@@ -11,6 +11,10 @@ class App extends Component {
     label: '',
   }
 
+  componentDidMount = () => {
+    this.randomJokes()
+  }
+
   randomJokes = () => {
     this.setState({
       isLoading: true,
